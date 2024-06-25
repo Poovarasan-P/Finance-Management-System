@@ -1,0 +1,143 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\kanim\Desktop> mkdir personal-finance-management
+
+
+    Directory: C:\Users\kanim\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        25-06-2024     20:37                personal-finance-management
+
+
+PS C:\Users\kanim\Desktop> cd personal-finance-management
+PS C:\Users\kanim\Desktop\personal-finance-management> git init
+Initialized empty Git repository in C:/Users/kanim/Desktop/personal-finance-management/.git/
+PS C:\Users\kanim\Desktop\personal-finance-management> mkdir backend frontend
+mkdir : A positional parameter cannot be found that accepts argument 'frontend'.
+At line:1 char:1
++ mkdir backend frontend
++ ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [mkdir], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,mkdir
+
+PS C:\Users\kanim\Desktop\personal-finance-management> cd frontend
+cd : Cannot find path 'C:\Users\kanim\Desktop\personal-finance-management\frontend' because it does not exist.
+At line:1 char:1
++ cd frontend
++ ~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\kanim\...gement\frontend:String) [Set-Location], ItemNotFoundE
+   xception
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\kanim\Desktop\personal-finance-management> npx create-react-app finance-frontend
+Need to install the following packages:
+create-react-app@5.0.1
+Ok to proceed? (y)
+npm WARN deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm WARN deprecated fstream-ignore@1.0.5: This package is no longer supported.
+npm WARN deprecated uid-number@0.0.6: This package is no longer supported.
+npm WARN deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm WARN deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+npm WARN deprecated fstream@1.0.12: This package is no longer supported.
+npm WARN deprecated tar@2.2.2: This version of tar is no longer supported, and will not receive security updates. Please upgrade asap.
+
+Creating a new React app in C:\Users\kanim\Desktop\personal-finance-management\finance-frontend.
+
+Installing packages. This might take a couple of minutes.
+Installing react, react-dom, and react-scripts with cra-template...
+
+npm ERR! code ECONNRESET
+npm ERR! syscall read
+npm ERR! errno ECONNRESET
+npm ERR! network Invalid response body while trying to fetch https://registry.npmjs.org/@typescript-eslint%2feslint-plugin: read ECONNRESET
+npm ERR! network This is a problem related to network connectivity.
+npm ERR! network In most cases you are behind a proxy or have bad network settings.
+npm ERR! network
+npm ERR! network If you are behind a proxy, please make sure that the
+npm ERR! network 'proxy' config is set properly.  See: 'npm help config'
+
+npm ERR! A complete log of this run can be found in: C:\Users\kanim\AppData\Local\npm-cache\_logs\2024-06-25T15_09_22_624Z-debug-0.log
+
+Aborting installation.
+  npm install --no-audit --save --save-exact --loglevel error react react-dom react-scripts cra-template has failed.
+
+Deleting generated file... package.json
+Deleting finance-frontend/ from C:\Users\kanim\Desktop\personal-finance-management
+Done.
+PS C:\Users\kanim\Desktop\personal-finance-management>
+PS C:\Users\kanim\Desktop\personal-finance-management> cd ..
+PS C:\Users\kanim\Desktop> cd backend
+cd : Cannot find path 'C:\Users\kanim\Desktop\backend' because it does not exist.
+At line:1 char:1
++ cd backend
++ ~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\kanim\Desktop\backend:String) [Set-Location], ItemNotFoundExce
+   ption
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Users\kanim\Desktop> python -m venv venv
+PS C:\Users\kanim\Desktop> source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source : The term 'source' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (source:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\kanim\Desktop>
+PS C:\Users\kanim\Desktop> mkdir app
+
+
+    Directory: C:\Users\kanim\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        25-06-2024     20:43                app
+
+
+PS C:\Users\kanim\Desktop> cd app
+PS C:\Users\kanim\Desktop\app> touch __init__.py
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch __init__.py
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\kanim\Desktop\app> cd ..
+PS C:\Users\kanim\Desktop> touch .gitignore
+touch : The term 'touch' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ touch .gitignore
++ ~~~~~
+    + CategoryInfo          : ObjectNotFound: (touch:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS C:\Users\kanim\Desktop> echo "venv/" >> .gitignore
+PS C:\Users\kanim\Desktop> echo "frontend/node_modules/" >> .gitignore
+PS C:\Users\kanim\Desktop> echo "frontend/build/" >> .gitignore
+PS C:\Users\kanim\Desktop> git add .
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\kanim\Desktop> git commit -m "Initial project setup"
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\kanim\Desktop> git add .
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\kanim\Desktop> git commit -m "Initial project setup"
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\kanim\Desktop> git remote add origin https://github.com/yourusername/personal-finance-management.git
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\kanim\Desktop> git branch -M main
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\kanim\Desktop> git push -u origin main
+fatal: not a git repository (or any of the parent directories): .git
+PS C:\Users\kanim\Desktop>
+failed-fwd-i-search: _
